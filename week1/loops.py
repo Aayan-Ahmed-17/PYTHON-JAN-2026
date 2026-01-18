@@ -41,3 +41,21 @@ Example: 123 → 6
 #     print(total)
 
 # print("end")
+
+
+"""
+print this pattern
+*
+**
+***
+****
+*****
+"""
+char = input("Enter any single character here: ")
+
+if char:
+    for i in range(1, 6):
+        print(char[0] * i)
+else:
+    print("can't be empty")
+
