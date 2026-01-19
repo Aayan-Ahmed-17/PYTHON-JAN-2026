@@ -74,14 +74,36 @@ Takes a number
 Prints whether it is palindrome
 Example: 121 → palindrome
 """
-is_palindrome = input("Check num is palidrom or not: ")
+# is_palindrome = input("Check num is palidrom or not: ")
 
-def check_palindrome(nums):
-    reverse = ""
-    for i in range(len(nums) - 1, -1, -1):
-        reverse += nums[i]
+# def check_palindrome(nums):
+#     reverse = ""
+#     for i in range(len(nums) - 1, -1, -1):
+#         reverse += nums[i]
     
-    result = reverse == nums
-    return result, nums, reverse
+#     result = reverse == nums
+#     return result, nums, reverse
 
-print(check_palindrome(is_palindrome))
+# print(check_palindrome(is_palindrome))
+
+"""
+Q19.) Create a function that:
+Takes a number n
+Returns the factorial of n
+"""
+# def factorial(n):
+#         if not isinstance(n, int):
+#             return "Enter integer only"
+
+#         if n < 1:
+#             return "Please enter number greater than 1"
+        
+#         fact = 1
+#         for i in range(n, 1, -1):
+#              fact *= i
+
+#         return fact
+
+# print(factorial(5))
+             
+    
