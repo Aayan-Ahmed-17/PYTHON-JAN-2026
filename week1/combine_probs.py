@@ -105,5 +105,3 @@ Returns the factorial of n
 #         return fact
 
 # print(factorial(5))
-             
-    
