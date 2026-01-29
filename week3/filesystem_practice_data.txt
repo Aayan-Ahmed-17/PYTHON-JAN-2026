@@ -1,0 +1,22 @@
+# Python File System Practice File
+# Filename: filesystem_practice_data.txt
+# Do NOT change this header unless instructed
+
+USER_ID,NAME,EMAIL,STATUS
+1,Alice,alice@example.com,active
+2,Bob,bob@example.com,inactive
+3,Charlie,charlie@example.com,active
+4,Diana,diana@example.com,pending
+5,Eric,eric@example.com,active
+
+--- LOGS ---
+2024-01-01 10:00:01 INFO User logged in
+2024-01-01 10:05:12 WARNING Invalid password attempt
+2024-01-01 10:15:45 INFO User logged out
+2024-01-02 09:00:00 ERROR Database connection failed
+
+--- NOTES ---
+• Practice reading line by line
+• Practice filtering active users
+• Practice updating user status
+• Practice deleting specific records
