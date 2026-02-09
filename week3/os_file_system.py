@@ -27,3 +27,8 @@ import os
 
 #? =============questions================= 
 #*=========File i/o
+#01_read file
+
+with open('filesystem_practice_data.txt', 'r') as f:
+    for line in f:
+        print(line.strip())
