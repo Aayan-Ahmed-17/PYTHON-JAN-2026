@@ -2,8 +2,10 @@
 01) Write a Python program that creates an asynchronous function to print "Python Exercises!" with a two second delay.
 02) Write a Python program that creates three asynchronous functions and displays their respective names with different delays (1 second, 2 seconds, and 3 seconds).
 03) Write a Python program that creates an asyncio event loop and runs a coroutine that prints numbers from 1 to 7 with a delay of 1 second each.
+04) Write a Python program that runs multiple asynchronous tasks concurrently using asyncio.gather() and measures the time taken.
 """
 import asyncio
+import time
 
 """01"""
 # async def print_delayed_message():
@@ -33,9 +35,34 @@ import asyncio
 # asyncio.run(main())
 
 """03"""
-async def display_numbers():
-    for r in range(1,8):
-        await asyncio.sleep(1) 
-        print(r)
+# async def display_numbers():
+#     for r in range(1,8):
+#         await asyncio.sleep(1) 
+#         print(r)
 
-asyncio.run(display_numbers())
+# asyncio.run(display_numbers())
+
+"""04"""
+async def task1():
+    print("Task-1 started")
+    await asyncio.sleep(4)
+    print("Task-1 completed")
+
+async def task2():
+    print("Task-2 started")
+    await asyncio.sleep(3)
+    print("Task-2 completed")
+
+async def task3():
+    print("Task-3 started")
+    await asyncio.sleep(2)
+    print("Task-3 completed")
+
+async def main():
+    start_time = time.time()
+    await asyncio.gather(task1(), task2(), task3())
+    end_time = time.time()
+    time_taken = end_time - start_time
+    print("/n All function taken time {:.2}".format(time_taken))
+
+asyncio.run(main())
