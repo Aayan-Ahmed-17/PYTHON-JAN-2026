@@ -34,7 +34,16 @@ def update_task():
     return response
 
 
+# del request
+def delete_task():
+    url = "https://httpbin.org/delete"
+    response = httpx.delete(url)
+
+    return response.json()
+
+
 if __name__ == "__main__":
     # print(get_data())
     # print(create_task())
-    print(update_task())
+    # print(update_task())
+    print(delete_task())
