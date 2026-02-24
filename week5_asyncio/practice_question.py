@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 01) Write a Python program that creates an asynchronous function to print "Python Exercises!" with a two second delay.
 """
@@ -12,9 +11,7 @@ import asyncio
 """
 import asyncio
 import time
->>>>>>> 4c83c988cd38bcd82606605fd9ab27e0a39dd0d9
 
-<<<<<<< HEAD
 async def welcome():
     await asyncio.sleep(2) 
     print("Python Exercises!")
@@ -80,5 +77,3 @@ async def main():
     print("/n All function taken time {:.2}".format(time_taken))
 
 asyncio.run(main())
-
->>>>>>> 4c83c988cd38bcd82606605fd9ab27e0a39dd0d9
