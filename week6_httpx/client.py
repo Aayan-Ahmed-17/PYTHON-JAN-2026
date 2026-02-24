@@ -41,9 +41,19 @@ def delete_task():
 
     return response.json()
 
+def get_filtered_task():
+    url = "https://httpbin.org/get"
+    param = {"status": "completed"}
+
+    response = httpx.get(url, params=param)
+    print(f"Status Code: {response.status_code}")
+    print(f"Content: {response.json()}")
+
+    return response
 
 if __name__ == "__main__":
     # print(get_data())
     # print(create_task())
     # print(update_task())
-    print(delete_task())
+    # print(delete_task())
+    print(get_filtered_task())
