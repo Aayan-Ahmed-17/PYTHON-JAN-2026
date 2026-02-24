@@ -1,12 +1,13 @@
-import httpx
 import asyncio
+import httpx
 
-async def fetch_page():
-    async with httpx.AsyncClient() as client:
-        response = await client.get("https://books.toscrape.com/")
-        
-        print(response.status_code)  # 200 matlab OK
-        print(response.text)         # HTML content
-        return response.text
-    
-asyncio.run(fetch_page())
+async def call_api():
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get("https://jsonplaceholder.typicode.com/posts/1")
+            print(response.status_code)
+            print(response.json())
+    except Exception as e:
+        print("Error:", e)
+
+asyncio.run(call_api())
